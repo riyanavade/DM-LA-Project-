@@ -1,0 +1,36 @@
+Player_Name,Role,Nationality,Age,Batting_Avg,Strike_Rate,Bowling_Economy,Wickets,Base_Price_CR,Sold_Price_CR,Team,Status,Year
+Virat Kohli,Batsman,India,36,41.5,133.5,0.0,0,2.0,21.0,Royal Challengers Bangalore,Retained,2025
+Rohit Sharma,Batsman,India,37,31.8,130.8,0.0,0,2.0,16.3,Mumbai Indians,Retained,2025
+KL Rahul,Wicket-Keeper Batsman,India,32,47.5,136.5,0.0,0,2.0,14.0,Delhi Capitals,Sold,2025
+Rishabh Pant,Wicket-Keeper Batsman,India,27,35.5,148.5,0.0,0,2.0,27.0,Lucknow Super Giants,Sold,2025
+Ishan Kishan,Wicket-Keeper Batsman,India,26,33.5,138.8,0.0,0,2.0,11.25,Mumbai Indians,Retained,2025
+Shreyas Iyer,Batsman,India,29,34.5,127.5,0.0,0,2.0,26.75,Punjab Kings,Sold,2025
+Shubman Gill,Batsman,India,25,50.5,134.5,0.0,0,2.0,16.5,Gujarat Titans,Retained,2025
+Suryakumar Yadav,Batsman,India,34,50.5,183.5,0.0,0,2.0,16.35,Mumbai Indians,Retained,2025
+Sanju Samson,Wicket-Keeper Batsman,India,30,40.5,152.5,0.0,0,2.0,18.0,Rajasthan Royals,Retained,2025
+Ruturaj Gaikwad,Batsman,India,27,44.5,134.5,0.0,0,2.0,18.0,Chennai Super Kings,Retained,2025
+Hardik Pandya,All-Rounder,India,31,30.8,152.5,7.9,48,2.0,16.35,Mumbai Indians,Retained,2025
+Ravindra Jadeja,All-Rounder,India,36,30.2,123.5,6.9,135,2.0,18.0,Chennai Super Kings,Retained,2025
+Axar Patel,All-Rounder,India,31,25.5,124.5,6.8,115,2.0,16.5,Delhi Capitals,Retained,2025
+Washington Sundar,All-Rounder,India,25,23.5,124.5,6.1,58,1.5,3.6,Sunrisers Hyderabad,Sold,2025
+Shardul Thakur,All-Rounder,India,33,24.2,116.5,8.3,95,0.5,1.5,,Unsold,2025
+Jasprit Bumrah,Bowler,India,31,8.2,83.0,6.6,152,2.0,18.0,Mumbai Indians,Retained,2025
+Yuzvendra Chahal,Bowler,India,34,9.0,102.5,7.3,170,2.0,18.0,Punjab Kings,Sold,2025
+Mohammed Shami,Bowler,India,34,9.0,83.5,8.0,165,2.0,10.0,Sunrisers Hyderabad,Sold,2025
+Arshdeep Singh,Bowler,India,26,8.8,83.0,7.8,95,2.0,18.0,Punjab Kings,Retained,2025
+Harshal Patel,Bowler,India,34,17.5,114.5,7.9,115,2.0,9.25,Chennai Super Kings,Retained,2025
+Kuldeep Yadav,Bowler,India,30,11.2,93.5,5.6,105,2.0,13.25,Delhi Capitals,Retained,2025
+Jos Buttler,Wicket-Keeper Batsman,England,34,35.5,152.5,0.0,0,2.0,15.75,Gujarat Titans,Sold,2025
+David Warner,Batsman,Australia,38,40.5,143.5,0.0,0,1.5,2.5,,Unsold,2025
+Faf du Plessis,Batsman,South Africa,40,34.5,138.8,0.0,0,2.0,2.0,Royal Challengers Bangalore,Retained,2025
+Nicholas Pooran,Wicket-Keeper Batsman,West Indies,29,32.8,143.5,0.0,0,2.0,21.0,Lucknow Super Giants,Retained,2025
+Heinrich Klaasen,Wicket-Keeper Batsman,South Africa,32,42.5,155.5,0.0,0,2.0,11.0,Sunrisers Hyderabad,Retained,2025
+Travis Head,Batsman,Australia,31,46.5,172.5,7.2,18,2.0,14.0,Sunrisers Hyderabad,Retained,2025
+Liam Livingstone,All-Rounder,England,31,35.5,164.5,7.8,42,2.0,8.75,Royal Challengers Bangalore,Sold,2025
+Rashid Khan,Bowler,Afghanistan,26,20.5,152.5,5.9,140,2.0,18.0,Gujarat Titans,Retained,2025
+Pat Cummins,All-Rounder,Australia,31,20.5,118.5,8.2,78,2.0,18.0,Sunrisers Hyderabad,Retained,2025
+Mitchell Starc,Bowler,Australia,35,10.5,91.5,7.4,88,2.0,11.75,Delhi Capitals,Sold,2025
+Kagiso Rabada,Bowler,South Africa,29,7.5,83.0,7.5,92,2.0,10.75,Gujarat Titans,Sold,2025
+Trent Boult,Bowler,New Zealand,35,7.5,93.0,7.5,78,2.0,5.0,Mumbai Indians,Sold,2025
+MS Dhoni,Wicket-Keeper Batsman,India,43,39.5,138.5,0.0,0,2.0,4.0,Chennai Super Kings,Retained,2025
+Yashasvi Jaiswal,Batsman,India,23,50.5,168.5,0.0,0,2.0,18.0,Rajasthan Royals,Retained,2025

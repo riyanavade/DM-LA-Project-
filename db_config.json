@@ -1,0 +1,7 @@
+{
+    "db_type": "SQLite",
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "ipl_auction_db"
+}

@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+streamlit
+mysql-connector-python
+xgboost
+plotly
+streamlit-option-menu
