@@ -86,7 +86,7 @@ def evaluate_classifiers(X_train, X_test, y_train, y_test):
 class IPLPredictionEngine:
     def __init__(self, df):
         self.raw_df = df
-        self.targets = ['Runs', 'Wickets', 'Sold_Price_CR', 'Sold_Status_Num']
+        self.targets = ['Runs', 'Wickets', 'Sold_Price_CR', 'Sold_Status_Num', 'Batting_Avg', 'Strike_Rate', 'Bowling_Economy', 'Matches']
         self.X, self.Y, self.processed_df = fe.get_feature_matrix(df, self.targets)
         self.models = {}
         self.metrics = {}
@@ -124,28 +124,57 @@ class IPLPredictionEngine:
         self.models['Sold'] = best_sold
         self.metrics['Sold'] = res_sold
         
-    def generate_2027_predictions(self):
-        # Create a proxy for 2027 using latest data (2026 if available)
+        # Predict Batting_Avg
+        X_train, X_test, y_train, y_test = self._safe_split(self.X, self.Y['Batting_Avg'])
+        res_bavg, best_bavg = evaluate_regressors(X_train, X_test, y_train, y_test)
+        self.models['Batting_Avg'] = best_bavg
+        self.metrics['Batting_Avg'] = res_bavg
+        
+        # Predict Strike_Rate
+        X_train, X_test, y_train, y_test = self._safe_split(self.X, self.Y['Strike_Rate'])
+        res_sr, best_sr = evaluate_regressors(X_train, X_test, y_train, y_test)
+        self.models['Strike_Rate'] = best_sr
+        self.metrics['Strike_Rate'] = res_sr
+        
+        # Predict Bowling_Economy
+        X_train, X_test, y_train, y_test = self._safe_split(self.X, self.Y['Bowling_Economy'])
+        res_econ, best_econ = evaluate_regressors(X_train, X_test, y_train, y_test)
+        self.models['Bowling_Economy'] = best_econ
+        self.metrics['Bowling_Economy'] = res_econ
+        
+        # Predict Matches
+        X_train, X_test, y_train, y_test = self._safe_split(self.X, self.Y['Matches'])
+        res_matches, best_matches = evaluate_regressors(X_train, X_test, y_train, y_test)
+        self.models['Matches'] = best_matches
+        self.metrics['Matches'] = res_matches
+        
+    def generate_next_year_predictions(self):
+        # Create a proxy for next year using latest data
         latest_year = self.processed_df['Year'].max()
+        target_year = latest_year + 1
         df_latest = self.processed_df[self.processed_df['Year'] == latest_year].copy()
         
         # Increment age and year
-        df_latest['Age'] += (2027 - latest_year)
-        df_latest['Year'] = 2027
+        df_latest['Age'] += (target_year - latest_year)
+        df_latest['Year'] = target_year
         
         # Get features
-        X_2027, _ = fe.get_feature_matrix(df_latest)
+        X_next_year, _ = fe.get_feature_matrix(df_latest)
         
         # Predict
-        runs_pred = self.models['Runs'].predict(X_2027)
-        wkts_pred = self.models['Wickets'].predict(X_2027)
-        price_pred = self.models['Price'].predict(X_2027)
+        runs_pred = self.models['Runs'].predict(X_next_year)
+        wkts_pred = self.models['Wickets'].predict(X_next_year)
+        price_pred = self.models['Price'].predict(X_next_year)
+        bavg_pred = self.models['Batting_Avg'].predict(X_next_year)
+        sr_pred = self.models['Strike_Rate'].predict(X_next_year)
+        econ_pred = self.models['Bowling_Economy'].predict(X_next_year)
+        matches_pred = self.models['Matches'].predict(X_next_year)
 
         # Attach debug info for interactive inspection
         try:
             self._last_debug = {
-                'X_2027_columns': list(X_2027.columns) if hasattr(X_2027, 'columns') else None,
-                'X_2027_sample': X_2027.head(5).to_dict(orient='list') if hasattr(X_2027, 'head') else None,
+                'X_next_year_columns': list(X_next_year.columns) if hasattr(X_next_year, 'columns') else None,
+                'X_next_year_sample': X_next_year.head(5).to_dict(orient='list') if hasattr(X_next_year, 'head') else None,
                 'runs_pred': runs_pred.tolist() if hasattr(runs_pred, 'tolist') else list(runs_pred),
                 'wkts_pred': wkts_pred.tolist() if hasattr(wkts_pred, 'tolist') else list(wkts_pred),
                 'price_pred': price_pred.tolist() if hasattr(price_pred, 'tolist') else list(price_pred)
@@ -156,25 +185,34 @@ class IPLPredictionEngine:
         # Safely handle predict_proba - DummyClassifier with 1 class returns only 1 column
         try:
             if hasattr(self.models['Sold'], "predict_proba"):
-                proba = self.models['Sold'].predict_proba(X_2027)
+                proba = self.models['Sold'].predict_proba(X_next_year)
                 if proba.shape[1] >= 2:
                     sold_prob = proba[:, 1]
                 else:
                     # Only 1 class known - use the single column as probability
                     sold_prob = proba[:, 0]
             else:
-                sold_prob = self.models['Sold'].predict(X_2027).astype(float)
+                sold_prob = self.models['Sold'].predict(X_next_year).astype(float)
         except Exception:
             # Ultimate fallback - assume all sold with 80% probability
-            sold_prob = np.ones(len(X_2027)) * 0.8
+            sold_prob = np.ones(len(X_next_year)) * 0.8
             
         results = pd.DataFrame({
             'Player_Name': df_latest['Player_Name'],
             'Role': df_latest['Role'],
+            'Nationality': df_latest.get('Nationality', ''),
+            'Age': df_latest['Age'],
+            'Team': df_latest.get('Team', ''),
+            'Year': df_latest['Year'],
+            'Base_Price_CR': df_latest.get('Base_Price_CR', 0.0),
             'Predicted_Runs': np.maximum(0, runs_pred.astype(int)),
             'Predicted_Wickets': np.maximum(0, wkts_pred.astype(int)),
             'Predicted_Price': np.maximum(0.5, np.round(price_pred, 2)),
-            'Sold_Probability': np.round(sold_prob * 100, 2)
+            'Sold_Probability': np.round(sold_prob * 100, 2),
+            'Predicted_Batting_Avg': np.maximum(0.0, np.round(bavg_pred, 2)),
+            'Predicted_Strike_Rate': np.maximum(0.0, np.round(sr_pred, 2)),
+            'Predicted_Economy': np.maximum(0.0, np.round(econ_pred, 2)),
+            'Predicted_Matches': np.maximum(1, matches_pred.astype(int))
         })
         
         # Price bounds
@@ -186,8 +224,8 @@ class IPLPredictionEngine:
 
 if __name__ == "__main__":
     # Test
-    df = pd.read_csv('ipl_dataset_5yr.csv')
+    df = pd.read_csv('ipl_dataset_4yr.csv')
     engine = IPLPredictionEngine(df)
     engine.train_all_models()
-    preds = engine.generate_2027_predictions()
+    preds = engine.generate_next_year_predictions()
     print(preds.head())

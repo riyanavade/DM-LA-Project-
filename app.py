@@ -516,7 +516,7 @@ with st.sidebar:
     
     selected_page = option_menu(
         menu_title=None,
-        options=["Dashboard", "Player Analysis", "IPL 2027 Predictions", "Upload Data"],
+        options=["Dashboard", "Player Analysis", "Next Year Predictions", "Upload Data"],
         icons=["grid-fill", "person-bounding-box", "robot", "cloud-upload-fill"],
         menu_icon="cast",
         default_index=0,
@@ -843,11 +843,11 @@ elif selected_page == "Player Analysis":
 
 
 # =====================================================================
-# PAGE 3: IPL 2027 PREDICTIONS
+# PAGE 3: NEXT YEAR PREDICTIONS
 # =====================================================================
-elif selected_page == "IPL 2027 Predictions":
-    st.markdown(f"<h3 style='font-size:1.8rem; font-weight:700; color:var(--text-primary); margin-bottom:10px;'>🚀 IPL 2027 Forecasting Engine</h3>", unsafe_allow_html=True)
-    st.write("Advanced multi-model pipeline forecasting player performance and auction values for 2027.")
+elif selected_page == "Next Year Predictions":
+    st.markdown(f"<h3 style='font-size:1.8rem; font-weight:700; color:var(--text-primary); margin-bottom:10px;'>🚀 Next Year Forecasting Engine</h3>", unsafe_allow_html=True)
+    st.write("Advanced multi-model pipeline forecasting player performance and auction values for the upcoming year.")
     
     if df.empty:
         st.warning("⚠️ No player data available. Please upload a dataset first.")
@@ -856,7 +856,7 @@ elif selected_page == "IPL 2027 Predictions":
         _ENGINE_VERSION = 4
         if ('ml_engine' not in st.session_state or
             st.session_state.get('ml_engine_version') != _ENGINE_VERSION or
-            'preds_2027' not in st.session_state):
+            'preds_next_year' not in st.session_state):
             with st.spinner("Initializing Advanced ML Pipeline & Engineering Features..."):
                 # Format dataframe columns to match what the ML Engine expects
                 ml_df = df.rename(columns={
@@ -877,11 +877,11 @@ elif selected_page == "IPL 2027 Predictions":
                 engine = mle.IPLPredictionEngine(ml_df)
                 engine.train_all_models()
                 st.session_state['ml_engine'] = engine
-                st.session_state['preds_2027'] = engine.generate_2027_predictions()
+                st.session_state['preds_next_year'] = engine.generate_next_year_predictions()
                 st.session_state['ml_engine_version'] = _ENGINE_VERSION
                 
         engine = st.session_state['ml_engine']
-        preds_df = st.session_state['preds_2027']
+        preds_df = st.session_state['preds_next_year']
 
         # (Debug expander removed per user request)
 
@@ -903,7 +903,7 @@ elif selected_page == "IPL 2027 Predictions":
                 st.metric("Players Displayed", len(filtered_df))
             with c2:
                 highest_price = filtered_df['Predicted_Price'].max() if not filtered_df.empty else 0
-                st.metric("Highest Projected Price", f"₹ {highest_price} Cr")
+                st.metric("Highest Projected Price", f"₹ {highest_price:.2f} Cr")
             with c3:
                 sold_count = len(filtered_df[filtered_df['Sold_Probability'] > 50])
                 st.metric("Expected Sold Players", sold_count)
@@ -988,14 +988,62 @@ elif selected_page == "Upload Data":
                     # 1. Overwrite the local base dataset file with the new dataset
                     uploaded_df.to_csv("ipl_dataset.csv", index=False)
                     
-                    # 2. Run multi-year generation pipeline (fills missing Matches & Runs and generates 5 years of history)
+                    # 2. Run multi-year generation pipeline (generates 4 years of history up to 2025)
                     from generate_sample_data import generate_multi_year_dataset
-                    generated_df = generate_multi_year_dataset("ipl_dataset.csv", "ipl_dataset_5yr.csv")
+                    generated_df = generate_multi_year_dataset("ipl_dataset.csv", "ipl_dataset_4yr.csv")
                     
-                    # 3. Upload the generated dataset to the database
                     db.clear_all_data()
                     if generated_df is not None:
-                        db.upload_data_to_db(generated_df)
+                        # 3. Generate 2026 predictions via ML engine
+                        import ml_engine as mle
+                        
+                        # Prepare mapping format
+                        ml_df = generated_df.rename(columns={
+                            'player_name': 'Player_Name', 'team': 'Team', 'role': 'Role',
+                            'nationality': 'Nationality', 'age': 'Age', 'matches': 'Matches',
+                            'runs': 'Runs', 'wickets': 'Wickets', 'strike_rate': 'Strike_Rate',
+                            'economy': 'Bowling_Economy', 'batting_avg': 'Batting_Avg',
+                            'year': 'Year', 'auction_price': 'Sold_Price_CR',
+                            'base_price': 'Base_Price_CR', 'sold_status': 'Status'
+                        })
+                        if 'Status' in ml_df.columns:
+                            def normalize_status(x):
+                                s = str(x).strip().lower()
+                                return 'Sold' if s in ['sold', 'retained', 'trade', '1', 'true', 'yes'] else 'Unsold'
+                            ml_df['Status'] = ml_df['Status'].apply(normalize_status)
+                            
+                        engine = mle.IPLPredictionEngine(ml_df)
+                        engine.train_all_models()
+                        preds_2026 = engine.generate_next_year_predictions()
+                        
+                        # Map predictions back to the schema
+                        mapped_2026 = pd.DataFrame({
+                            'Player_Name': preds_2026['Player_Name'],
+                            'Role': preds_2026['Role'],
+                            'Nationality': preds_2026['Nationality'],
+                            'Age': preds_2026['Age'],
+                            'Team': preds_2026['Team'],
+                            'Year': preds_2026['Year'],
+                            'Base_Price_CR': preds_2026['Base_Price_CR'],
+                            'Matches': preds_2026['Predicted_Matches'],
+                            'Batting_Avg': preds_2026['Predicted_Batting_Avg'],
+                            'Strike_Rate': preds_2026['Predicted_Strike_Rate'],
+                            'Runs': preds_2026['Predicted_Runs'],
+                            'Bowling_Economy': preds_2026['Predicted_Economy'],
+                            'Wickets': preds_2026['Predicted_Wickets'],
+                            'Sold_Price_CR': preds_2026['Predicted_Price'],
+                            'Status': ['Sold' if p > 50 else 'Unsold' for p in preds_2026['Sold_Probability']]
+                        })
+                        
+                        # Set Unsold values to 0 / empty
+                        unsold_mask = mapped_2026['Status'] == 'Unsold'
+                        mapped_2026.loc[unsold_mask, 'Sold_Price_CR'] = 0.0
+                        mapped_2026.loc[unsold_mask, 'Team'] = ''
+                        
+                        # Combine generated data and 2026 ML predictions
+                        combined_df = pd.concat([generated_df, mapped_2026], ignore_index=True)
+                        
+                        db.upload_data_to_db(combined_df)
                     else:
                         db.upload_data_to_db(uploaded_df)
                     

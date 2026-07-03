@@ -1,0 +1,141 @@
+Player_Name,Role,Nationality,Age,Team,Year,Base_Price_CR,Matches,Batting_Avg,Strike_Rate,Runs,Bowling_Economy,Wickets,Sold_Price_CR,Status
+Virat Kohli,Batsman,India,33,Royal Challengers Bangalore,2022,1.7,11,64.1,142.1,478,0.0,0,24.01,Sold
+Virat Kohli,Batsman,India,34,Royal Challengers Bangalore,2023,1.8,14,58.4,149.6,830,0.0,0,25.9,Sold
+Virat Kohli,Batsman,India,35,Royal Challengers Bangalore,2024,1.9,10,48.9,136.9,399,0.0,0,22.76,Sold
+Virat Kohli,Batsman,India,36,Royal Challengers Bangalore,2025,2.0,11,41.5,133.5,392,0.0,0,21.0,Retained
+Rohit Sharma,Batsman,India,34,Mumbai Indians,2022,1.7,9,50.0,131.3,385,0.0,0,21.36,Sold
+Rohit Sharma,Batsman,India,35,Mumbai Indians,2023,1.8,12,37.8,125.6,487,0.0,0,21.24,Sold
+Rohit Sharma,Batsman,India,36,Mumbai Indians,2024,1.9,10,37.0,137.9,303,0.0,0,17.35,Sold
+Rohit Sharma,Batsman,India,37,Mumbai Indians,2025,2.0,14,31.8,130.8,323,0.0,0,16.3,Retained
+KL Rahul,Wicket-Keeper Batsman,India,29,Delhi Capitals,2022,1.7,8,55.2,139.5,385,0.0,0,12.85,Sold
+KL Rahul,Wicket-Keeper Batsman,India,30,Delhi Capitals,2023,1.8,12,52.0,132.6,388,0.0,0,13.89,Sold
+KL Rahul,Wicket-Keeper Batsman,India,31,Delhi Capitals,2024,1.9,9,49.3,133.4,328,0.0,0,13.25,Sold
+KL Rahul,Wicket-Keeper Batsman,India,32,Delhi Capitals,2025,2.0,13,47.5,136.5,411,0.0,0,14.0,Sold
+Rishabh Pant,Wicket-Keeper Batsman,India,24,Lucknow Super Giants,2022,1.7,13,21.3,147.2,176,0.0,0,12.07,Sold
+Rishabh Pant,Wicket-Keeper Batsman,India,25,Lucknow Super Giants,2023,1.8,7,24.6,141.6,131,0.0,0,20.54,Sold
+Rishabh Pant,Wicket-Keeper Batsman,India,26,Lucknow Super Giants,2024,1.9,14,32.3,139.7,432,0.0,0,25.37,Sold
+Rishabh Pant,Wicket-Keeper Batsman,India,27,Lucknow Super Giants,2025,2.0,13,35.5,148.5,369,0.0,0,27.0,Sold
+Ishan Kishan,Wicket-Keeper Batsman,India,23,Mumbai Indians,2022,1.7,16,17.4,130.6,170,0.0,0,4.34,Sold
+Ishan Kishan,Wicket-Keeper Batsman,India,24,Mumbai Indians,2023,1.8,11,21.2,134.5,245,0.0,0,6.33,Sold
+Ishan Kishan,Wicket-Keeper Batsman,India,25,Mumbai Indians,2024,1.9,10,27.9,128.9,207,0.0,0,8.61,Sold
+Ishan Kishan,Wicket-Keeper Batsman,India,26,Mumbai Indians,2025,2.0,14,33.5,138.8,378,0.0,0,11.25,Retained
+Shreyas Iyer,Batsman,India,26,Punjab Kings,2022,1.7,16,30.0,121.0,314,0.0,0,16.23,Sold
+Shreyas Iyer,Batsman,India,27,Punjab Kings,2023,1.8,15,32.8,115.9,420,0.0,0,20.36,Sold
+Shreyas Iyer,Batsman,India,28,Punjab Kings,2024,1.9,10,30.7,135.4,233,0.0,0,23.72,Sold
+Shreyas Iyer,Batsman,India,29,Punjab Kings,2025,2.0,12,34.5,127.5,377,0.0,0,26.75,Sold
+Shubman Gill,Batsman,India,22,Gujarat Titans,2022,1.7,11,28.9,122.8,269,0.0,0,6.59,Sold
+Shubman Gill,Batsman,India,23,Gujarat Titans,2023,1.8,16,27.8,125.0,468,0.0,0,8.52,Sold
+Shubman Gill,Batsman,India,24,Gujarat Titans,2024,1.9,8,44.3,126.7,331,0.0,0,13.54,Sold
+Shubman Gill,Batsman,India,25,Gujarat Titans,2025,2.0,14,50.5,134.5,491,0.0,0,16.5,Retained
+Suryakumar Yadav,Batsman,India,31,Mumbai Indians,2022,1.7,16,59.2,178.3,963,0.0,0,15.33,Sold
+Suryakumar Yadav,Batsman,India,32,Mumbai Indians,2023,1.8,16,69.3,192.0,790,0.0,0,22.24,Sold
+Suryakumar Yadav,Batsman,India,33,Mumbai Indians,2024,1.9,13,59.7,195.9,519,0.0,0,17.76,Sold
+Suryakumar Yadav,Batsman,India,34,Mumbai Indians,2025,2.0,11,50.5,183.5,444,0.0,0,16.35,Retained
+Sanju Samson,Wicket-Keeper Batsman,India,27,Rajasthan Royals,2022,1.7,8,40.5,152.6,280,0.0,0,13.23,Sold
+Sanju Samson,Wicket-Keeper Batsman,India,28,Rajasthan Royals,2023,1.8,14,37.1,148.7,500,0.0,0,17.17,Sold
+Sanju Samson,Wicket-Keeper Batsman,India,29,Rajasthan Royals,2024,1.9,13,41.3,144.1,365,0.0,0,19.0,Sold
+Sanju Samson,Wicket-Keeper Batsman,India,30,Rajasthan Royals,2025,2.0,13,40.5,152.5,340,0.0,0,18.0,Retained
+Ruturaj Gaikwad,Batsman,India,24,Chennai Super Kings,2022,1.7,12,24.7,131.1,211,0.0,0,8.47,Sold
+Ruturaj Gaikwad,Batsman,India,25,Chennai Super Kings,2023,1.8,9,30.4,132.6,280,0.0,0,10.82,Sold
+Ruturaj Gaikwad,Batsman,India,26,Chennai Super Kings,2024,1.9,9,35.4,127.4,230,0.0,0,16.02,Sold
+Ruturaj Gaikwad,Batsman,India,27,Chennai Super Kings,2025,2.0,13,44.5,134.5,436,0.0,0,18.0,Retained
+Hardik Pandya,All-Rounder,India,28,Mumbai Indians,2022,1.7,14,32.6,152.3,283,7.9,45,14.54,Sold
+Hardik Pandya,All-Rounder,India,29,Mumbai Indians,2023,1.8,13,31.0,159.9,298,7.9,36,14.83,Sold
+Hardik Pandya,All-Rounder,India,30,Mumbai Indians,2024,1.9,11,35.9,160.2,206,7.8,43,15.33,Sold
+Hardik Pandya,All-Rounder,India,31,Mumbai Indians,2025,2.0,13,30.8,152.5,362,7.9,48,16.35,Retained
+Ravindra Jadeja,All-Rounder,India,33,Chennai Super Kings,2022,1.7,13,38.9,130.7,387,6.3,176,23.77,Sold
+Ravindra Jadeja,All-Rounder,India,34,Chennai Super Kings,2023,1.8,14,46.9,126.9,343,6.9,205,26.98,Sold
+Ravindra Jadeja,All-Rounder,India,35,Chennai Super Kings,2024,1.9,12,39.6,133.3,307,6.9,155,25.07,Sold
+Ravindra Jadeja,All-Rounder,India,36,Chennai Super Kings,2025,2.0,14,30.2,123.5,290,6.9,135,18.0,Retained
+Axar Patel,All-Rounder,India,28,Delhi Capitals,2022,1.7,11,21.9,113.1,140,7.0,74,12.0,Sold
+Axar Patel,All-Rounder,India,29,Delhi Capitals,2023,1.8,15,21.3,124.4,219,6.5,119,12.39,Sold
+Axar Patel,All-Rounder,India,30,Delhi Capitals,2024,1.9,10,26.4,127.5,177,7.3,85,15.18,Sold
+Axar Patel,All-Rounder,India,31,Delhi Capitals,2025,2.0,12,25.5,124.5,254,6.8,115,16.5,Retained
+Washington Sundar,All-Rounder,India,22,Sunrisers Hyderabad,2022,1.27,9,9.5,111.6,42,6.4,21,1.66,Sold
+Washington Sundar,All-Rounder,India,23,Sunrisers Hyderabad,2023,1.35,13,17.9,119.4,117,6.1,41,2.0,Sold
+Washington Sundar,All-Rounder,India,24,Sunrisers Hyderabad,2024,1.42,11,17.2,122.7,110,5.9,40,2.88,Sold
+Washington Sundar,All-Rounder,India,25,Sunrisers Hyderabad,2025,1.5,15,23.5,124.5,249,6.1,58,3.6,Sold
+Shardul Thakur,All-Rounder,India,30,nan,2022,0.42,12,26.1,120.4,186,8.6,93,1.28,Sold
+Shardul Thakur,All-Rounder,India,31,nan,2023,0.45,10,25.2,120.5,188,8.2,81,1.69,Sold
+Shardul Thakur,All-Rounder,India,32,nan,2024,0.47,6,33.1,116.8,149,8.5,48,1.52,Sold
+Shardul Thakur,All-Rounder,India,33,,2025,0.5,13,24.2,116.5,209,8.3,95,1.5,Unsold
+Jasprit Bumrah,Bowler,India,28,Mumbai Indians,2022,1.7,14,5.1,70.9,28,7.0,129,11.57,Sold
+Jasprit Bumrah,Bowler,India,29,Mumbai Indians,2023,1.8,14,9.3,79.1,52,6.9,148,14.44,Sold
+Jasprit Bumrah,Bowler,India,30,Mumbai Indians,2024,1.9,13,10.2,90.8,53,7.0,154,17.99,Sold
+Jasprit Bumrah,Bowler,India,31,Mumbai Indians,2025,2.0,11,8.2,83.0,34,6.6,152,18.0,Retained
+Yuzvendra Chahal,Bowler,India,31,Punjab Kings,2022,1.7,11,14.6,149.7,64,6.9,198,24.05,Sold
+Yuzvendra Chahal,Bowler,India,32,Punjab Kings,2023,1.8,12,12.2,147.3,58,7.4,209,19.87,Sold
+Yuzvendra Chahal,Bowler,India,33,Punjab Kings,2024,1.9,11,12.3,119.8,54,7.3,158,19.68,Sold
+Yuzvendra Chahal,Bowler,India,34,Punjab Kings,2025,2.0,11,9.0,102.5,36,7.3,170,18.0,Sold
+Mohammed Shami,Bowler,India,31,Sunrisers Hyderabad,2022,1.7,14,11.1,92.2,62,7.5,183,8.14,Sold
+Mohammed Shami,Bowler,India,32,Sunrisers Hyderabad,2023,1.8,5,13.8,113.2,27,7.6,77,10.9,Sold
+Mohammed Shami,Bowler,India,33,Sunrisers Hyderabad,2024,1.9,13,9.7,104.6,50,7.4,194,10.37,Sold
+Mohammed Shami,Bowler,India,34,Sunrisers Hyderabad,2025,2.0,15,9.0,83.5,39,8.0,165,10.0,Sold
+Arshdeep Singh,Bowler,India,23,Punjab Kings,2022,1.7,12,5.0,60.0,12,8.7,40,7.35,Sold
+Arshdeep Singh,Bowler,India,24,Punjab Kings,2023,1.8,11,6.6,60.0,29,8.2,46,11.31,Sold
+Arshdeep Singh,Bowler,India,25,Punjab Kings,2024,1.9,8,5.4,69.3,17,7.9,42,12.64,Sold
+Arshdeep Singh,Bowler,India,26,Punjab Kings,2025,2.0,13,8.8,83.0,36,7.8,95,18.0,Retained
+Harshal Patel,Bowler,India,31,Chennai Super Kings,2022,1.7,13,20.2,135.4,105,7.5,130,8.53,Sold
+Harshal Patel,Bowler,India,32,Chennai Super Kings,2023,1.8,12,24.4,146.9,117,7.3,127,12.18,Sold
+Harshal Patel,Bowler,India,33,Chennai Super Kings,2024,1.9,16,21.9,138.2,140,7.7,160,10.87,Sold
+Harshal Patel,Bowler,India,34,Chennai Super Kings,2025,2.0,13,17.5,114.5,79,7.9,115,9.25,Retained
+Kuldeep Yadav,Bowler,India,27,Delhi Capitals,2022,1.7,9,11.5,103.8,41,5.2,75,11.95,Sold
+Kuldeep Yadav,Bowler,India,28,Delhi Capitals,2023,1.8,12,11.5,79.8,55,6.2,79,10.28,Sold
+Kuldeep Yadav,Bowler,India,29,Delhi Capitals,2024,1.9,10,12.2,96.0,48,5.2,81,14.18,Sold
+Kuldeep Yadav,Bowler,India,30,Delhi Capitals,2025,2.0,11,11.2,93.5,51,5.6,105,13.25,Retained
+Jos Buttler,Wicket-Keeper Batsman,England,31,Gujarat Titans,2022,1.7,11,55.7,169.9,413,0.0,0,22.22,Sold
+Jos Buttler,Wicket-Keeper Batsman,England,32,Gujarat Titans,2023,1.8,11,43.2,151.6,298,0.0,0,22.59,Sold
+Jos Buttler,Wicket-Keeper Batsman,England,33,Gujarat Titans,2024,1.9,16,46.9,162.9,543,0.0,0,18.47,Sold
+Jos Buttler,Wicket-Keeper Batsman,England,34,Gujarat Titans,2025,2.0,13,35.5,152.5,420,0.0,0,15.75,Sold
+David Warner,Batsman,Australia,35,nan,2022,1.27,13,62.1,153.0,628,0.0,0,3.2,Sold
+David Warner,Batsman,Australia,36,nan,2023,1.35,12,60.9,157.7,640,0.0,0,4.04,Sold
+David Warner,Batsman,Australia,37,nan,2024,1.42,11,48.1,152.6,481,0.0,0,3.37,Sold
+David Warner,Batsman,Australia,38,,2025,1.5,14,40.5,143.5,397,0.0,0,2.5,Unsold
+Faf du Plessis,Batsman,South Africa,37,Royal Challengers Bangalore,2022,1.7,14,50.5,146.0,701,0.0,0,2.78,Sold
+Faf du Plessis,Batsman,South Africa,38,Royal Challengers Bangalore,2023,1.8,6,51.4,155.3,261,0.0,0,2.89,Sold
+Faf du Plessis,Batsman,South Africa,39,Royal Challengers Bangalore,2024,1.9,11,47.3,137.7,351,0.0,0,2.79,Sold
+Faf du Plessis,Batsman,South Africa,40,Royal Challengers Bangalore,2025,2.0,12,34.5,138.8,312,0.0,0,2.0,Retained
+Nicholas Pooran,Wicket-Keeper Batsman,West Indies,26,Lucknow Super Giants,2022,1.7,11,26.8,144.3,202,0.0,0,13.46,Sold
+Nicholas Pooran,Wicket-Keeper Batsman,West Indies,27,Lucknow Super Giants,2023,1.8,9,23.9,132.5,142,0.0,0,15.69,Sold
+Nicholas Pooran,Wicket-Keeper Batsman,West Indies,28,Lucknow Super Giants,2024,1.9,5,32.5,133.5,162,0.0,0,19.89,Sold
+Nicholas Pooran,Wicket-Keeper Batsman,West Indies,29,Lucknow Super Giants,2025,2.0,12,32.8,143.5,370,0.0,0,21.0,Retained
+Heinrich Klaasen,Wicket-Keeper Batsman,South Africa,29,Sunrisers Hyderabad,2022,1.7,9,41.3,153.3,313,0.0,0,10.67,Sold
+Heinrich Klaasen,Wicket-Keeper Batsman,South Africa,30,Sunrisers Hyderabad,2023,1.8,16,45.0,152.8,688,0.0,0,13.99,Sold
+Heinrich Klaasen,Wicket-Keeper Batsman,South Africa,31,Sunrisers Hyderabad,2024,1.9,9,44.1,156.9,286,0.0,0,10.97,Sold
+Heinrich Klaasen,Wicket-Keeper Batsman,South Africa,32,Sunrisers Hyderabad,2025,2.0,13,42.5,155.5,360,0.0,0,11.0,Retained
+Travis Head,Batsman,Australia,28,Sunrisers Hyderabad,2022,1.7,10,35.4,161.3,370,0.0,0,11.0,Sold
+Travis Head,Batsman,Australia,29,Sunrisers Hyderabad,2023,1.8,16,43.2,173.2,617,0.0,0,14.68,Sold
+Travis Head,Batsman,Australia,30,Sunrisers Hyderabad,2024,1.9,9,45.4,175.4,361,0.0,0,15.24,Sold
+Travis Head,Batsman,Australia,31,Sunrisers Hyderabad,2025,2.0,10,46.5,172.5,407,7.2,18,14.0,Retained
+Liam Livingstone,All-Rounder,England,28,Royal Challengers Bangalore,2022,1.7,10,33.5,158.6,173,7.5,34,7.34,Sold
+Liam Livingstone,All-Rounder,England,29,Royal Challengers Bangalore,2023,1.8,12,30.2,161.4,275,8.2,37,7.08,Sold
+Liam Livingstone,All-Rounder,England,30,Royal Challengers Bangalore,2024,1.9,13,36.6,166.2,246,8.1,38,8.69,Sold
+Liam Livingstone,All-Rounder,England,31,Royal Challengers Bangalore,2025,2.0,13,35.5,164.5,363,7.8,42,8.75,Sold
+Rashid Khan,Bowler,Afghanistan,23,,2022,1.7,11,10.7,76.2,47,6.0,56,0.0,Unsold
+Rashid Khan,Bowler,Afghanistan,24,Gujarat Titans,2023,1.8,12,12.2,95.6,58,5.8,72,12.39,Sold
+Rashid Khan,Bowler,Afghanistan,25,Gujarat Titans,2024,1.9,14,17.3,123.5,96,6.3,115,14.87,Sold
+Rashid Khan,Bowler,Afghanistan,26,Gujarat Titans,2025,2.0,13,20.5,152.5,90,5.9,140,18.0,Retained
+Pat Cummins,All-Rounder,Australia,28,Sunrisers Hyderabad,2022,1.7,12,16.2,108.8,131,8.3,64,14.44,Sold
+Pat Cummins,All-Rounder,Australia,29,Sunrisers Hyderabad,2023,1.8,10,18.0,124.9,116,8.2,56,19.62,Sold
+Pat Cummins,All-Rounder,Australia,30,Sunrisers Hyderabad,2024,1.9,11,19.5,117.7,112,8.4,62,18.52,Sold
+Pat Cummins,All-Rounder,Australia,31,Sunrisers Hyderabad,2025,2.0,14,20.5,118.5,200,8.2,78,18.0,Retained
+Mitchell Starc,Bowler,Australia,32,Delhi Capitals,2022,1.7,12,16.2,137.2,77,6.6,117,16.6,Sold
+Mitchell Starc,Bowler,Australia,33,Delhi Capitals,2023,1.8,10,15.4,130.3,61,7.1,93,16.86,Sold
+Mitchell Starc,Bowler,Australia,34,Delhi Capitals,2024,1.9,9,12.9,103.6,46,6.8,65,16.02,Sold
+Mitchell Starc,Bowler,Australia,35,Delhi Capitals,2025,2.0,14,10.5,91.5,27,7.4,88,11.75,Sold
+Kagiso Rabada,Bowler,South Africa,26,Gujarat Titans,2022,1.7,15,5.0,60.0,22,7.5,70,7.52,Sold
+Kagiso Rabada,Bowler,South Africa,27,Gujarat Titans,2023,1.8,13,5.1,67.6,26,7.5,68,9.88,Sold
+Kagiso Rabada,Bowler,South Africa,28,Gujarat Titans,2024,1.9,9,9.5,85.5,34,7.1,62,11.83,Sold
+Kagiso Rabada,Bowler,South Africa,29,Gujarat Titans,2025,2.0,9,7.5,83.0,18,7.5,92,10.75,Sold
+Trent Boult,Bowler,New Zealand,32,Mumbai Indians,2022,1.7,13,12.9,139.5,67,7.3,106,7.31,Sold
+Trent Boult,Bowler,New Zealand,33,Mumbai Indians,2023,1.8,10,13.0,139.5,52,7.6,84,7.14,Sold
+Trent Boult,Bowler,New Zealand,34,Mumbai Indians,2024,1.9,13,9.7,125.5,50,6.8,97,7.0,Sold
+Trent Boult,Bowler,New Zealand,35,Mumbai Indians,2025,2.0,11,7.5,93.0,27,7.5,78,5.0,Sold
+MS Dhoni,Wicket-Keeper Batsman,India,40,Chennai Super Kings,2022,1.7,11,39.0,143.5,354,0.0,0,3.17,Sold
+MS Dhoni,Wicket-Keeper Batsman,India,41,Chennai Super Kings,2023,1.8,8,34.7,137.7,224,0.0,0,3.83,Sold
+MS Dhoni,Wicket-Keeper Batsman,India,42,Chennai Super Kings,2024,1.9,15,23.1,122.6,322,0.0,0,1.91,Sold
+MS Dhoni,Wicket-Keeper Batsman,India,43,Chennai Super Kings,2025,2.0,10,39.5,138.5,468,0.0,0,4.0,Retained
+Yashasvi Jaiswal,Batsman,India,20,Rajasthan Royals,2022,1.7,8,21.9,170.0,149,0.0,0,7.87,Sold
+Yashasvi Jaiswal,Batsman,India,21,Rajasthan Royals,2023,1.8,11,24.3,168.5,187,0.0,0,7.76,Sold
+Yashasvi Jaiswal,Batsman,India,22,Rajasthan Royals,2024,1.9,10,37.9,155.4,374,0.0,0,12.47,Sold
+Yashasvi Jaiswal,Batsman,India,23,Rajasthan Royals,2025,2.0,9,50.5,168.5,497,0.0,0,18.0,Retained

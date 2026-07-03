@@ -6,7 +6,7 @@ import random
 np.random.seed(42)
 random.seed(42)
 
-def generate_multi_year_dataset(base_csv="ipl_dataset.csv", output_csv="ipl_dataset_5yr.csv"):
+def generate_multi_year_dataset(base_csv="ipl_dataset.csv", output_csv="ipl_dataset_4yr.csv"):
     if not os.path.exists(base_csv):
         print(f"Error: {base_csv} not found.")
         return None
@@ -14,7 +14,7 @@ def generate_multi_year_dataset(base_csv="ipl_dataset.csv", output_csv="ipl_data
     df_base = pd.read_csv(base_csv)
     df_base = df_base.dropna(how='all')
     
-    years = [2022, 2023, 2024, 2025, 2026]
+    years = [2022, 2023, 2024, 2025]
     all_data = []
     
     # Age performance curve
